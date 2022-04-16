@@ -32,18 +32,18 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnExit = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnSignIn = new Guna.UI2.WinForms.Guna2Button();
             this.btnReset = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBoxSignIn = new System.Windows.Forms.GroupBox();
-            this.txtboxPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            this.checkBoxShowPassword = new System.Windows.Forms.CheckBox();
             this.txtboxUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.checkboxShowPassword = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -82,21 +82,22 @@
             this.label1.Text = "Pharmacy\r\nManagement\r\nSystem";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // guna2Button1
+            // btnExit
             // 
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.White;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
-            this.guna2Button1.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2Button1.Location = new System.Drawing.Point(1330, 12);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(38, 36);
-            this.guna2Button1.TabIndex = 1;
+            this.btnExit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnExit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnExit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnExit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnExit.FillColor = System.Drawing.Color.White;
+            this.btnExit.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnExit.Location = new System.Drawing.Point(1330, 12);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(38, 36);
+            this.btnExit.TabIndex = 1;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // panel2
             // 
@@ -126,6 +127,7 @@
             this.btnSignIn.Size = new System.Drawing.Size(165, 45);
             this.btnSignIn.TabIndex = 9;
             this.btnSignIn.Text = "Sign in";
+            this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
             // 
             // btnReset
             // 
@@ -147,6 +149,7 @@
             this.btnReset.Size = new System.Drawing.Size(165, 45);
             this.btnReset.TabIndex = 10;
             this.btnReset.Text = "Reset";
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // pictureBox2
             // 
@@ -160,8 +163,8 @@
             // 
             // groupBoxSignIn
             // 
-            this.groupBoxSignIn.Controls.Add(this.checkboxShowPassword);
-            this.groupBoxSignIn.Controls.Add(this.txtboxPassword);
+            this.groupBoxSignIn.Controls.Add(this.txtPassword);
+            this.groupBoxSignIn.Controls.Add(this.checkBoxShowPassword);
             this.groupBoxSignIn.Controls.Add(this.txtboxUsername);
             this.groupBoxSignIn.Controls.Add(this.btnReset);
             this.groupBoxSignIn.Controls.Add(this.label3);
@@ -175,27 +178,17 @@
             this.groupBoxSignIn.TabStop = false;
             this.groupBoxSignIn.Text = "Sign In";
             // 
-            // txtboxPassword
+            // checkBoxShowPassword
             // 
-            this.txtboxPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtboxPassword.DefaultText = "";
-            this.txtboxPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtboxPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtboxPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtboxPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtboxPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtboxPassword.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtboxPassword.ForeColor = System.Drawing.Color.Black;
-            this.txtboxPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtboxPassword.Location = new System.Drawing.Point(145, 125);
-            this.txtboxPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtboxPassword.Name = "txtboxPassword";
-            this.txtboxPassword.PasswordChar = '●';
-            this.txtboxPassword.PlaceholderText = "";
-            this.txtboxPassword.SelectedText = "";
-            this.txtboxPassword.Size = new System.Drawing.Size(240, 39);
-            this.txtboxPassword.TabIndex = 12;
-            this.txtboxPassword.UseSystemPasswordChar = true;
+            this.checkBoxShowPassword.AutoSize = true;
+            this.checkBoxShowPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxShowPassword.Location = new System.Drawing.Point(146, 184);
+            this.checkBoxShowPassword.Name = "checkBoxShowPassword";
+            this.checkBoxShowPassword.Size = new System.Drawing.Size(151, 24);
+            this.checkBoxShowPassword.TabIndex = 13;
+            this.checkBoxShowPassword.Text = "Show Password";
+            this.checkBoxShowPassword.UseVisualStyleBackColor = true;
+            this.checkBoxShowPassword.CheckedChanged += new System.EventHandler(this.checkBoxShowPassword_CheckedChanged);
             // 
             // txtboxUsername
             // 
@@ -216,7 +209,7 @@
             this.txtboxUsername.PlaceholderText = "";
             this.txtboxUsername.SelectedText = "";
             this.txtboxUsername.Size = new System.Drawing.Size(240, 43);
-            this.txtboxUsername.TabIndex = 11;
+            this.txtboxUsername.TabIndex = 0;
             // 
             // label3
             // 
@@ -246,25 +239,25 @@
             this.label4.TabIndex = 11;
             this.label4.Text = "Login Form";
             // 
-            // checkboxShowPassword
+            // txtPassword
             // 
-            this.checkboxShowPassword.AutoSize = true;
-            this.checkboxShowPassword.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.checkboxShowPassword.CheckedState.BorderRadius = 0;
-            this.checkboxShowPassword.CheckedState.BorderThickness = 0;
-            this.checkboxShowPassword.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.checkboxShowPassword.CheckMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.checkboxShowPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkboxShowPassword.ForeColor = System.Drawing.Color.Black;
-            this.checkboxShowPassword.Location = new System.Drawing.Point(145, 182);
-            this.checkboxShowPassword.Name = "checkboxShowPassword";
-            this.checkboxShowPassword.Size = new System.Drawing.Size(151, 24);
-            this.checkboxShowPassword.TabIndex = 13;
-            this.checkboxShowPassword.Text = "Show Password";
-            this.checkboxShowPassword.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.checkboxShowPassword.UncheckedState.BorderRadius = 0;
-            this.checkboxShowPassword.UncheckedState.BorderThickness = 0;
-            this.checkboxShowPassword.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPassword.DefaultText = "";
+            this.txtPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.ForeColor = System.Drawing.Color.Black;
+            this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPassword.Location = new System.Drawing.Point(144, 122);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.PlaceholderText = "";
+            this.txtPassword.SelectedText = "";
+            this.txtPassword.Size = new System.Drawing.Size(240, 43);
+            this.txtPassword.TabIndex = 1;
             // 
             // Form1
             // 
@@ -276,7 +269,7 @@
             this.Controls.Add(this.groupBoxSignIn);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
@@ -298,7 +291,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnExit;
         private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2Button btnSignIn;
         private Guna.UI2.WinForms.Guna2Button btnReset;
@@ -307,9 +300,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2TextBox txtboxPassword;
         private Guna.UI2.WinForms.Guna2TextBox txtboxUsername;
-        private Guna.UI2.WinForms.Guna2CheckBox checkboxShowPassword;
+        private System.Windows.Forms.CheckBox checkBoxShowPassword;
+        private Guna.UI2.WinForms.Guna2TextBox txtPassword;
     }
 }
 

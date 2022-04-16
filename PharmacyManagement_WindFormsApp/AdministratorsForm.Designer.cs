@@ -41,9 +41,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.guna2ElipseDashboard = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.userControl_DashBoard = new PharmacyManagement_WindFormsApp.AdministratorsUC.UserControl_DashBoard();
             this.guna2ElipseAddUser = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.userControl_AddUser = new PharmacyManagement_WindFormsApp.AdministratorsUC.UserControl_AddUser();
+            this.userControl_DashBoard = new PharmacyManagement_WindFormsApp.AdministratorsUC.UserControl_DashBoard();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -213,14 +213,6 @@
             // 
             this.guna2ElipseDashboard.TargetControl = this.panel2;
             // 
-            // userControl_DashBoard
-            // 
-            this.userControl_DashBoard.BackColor = System.Drawing.Color.White;
-            this.userControl_DashBoard.Location = new System.Drawing.Point(-3, -3);
-            this.userControl_DashBoard.Name = "userControl_DashBoard";
-            this.userControl_DashBoard.Size = new System.Drawing.Size(1104, 768);
-            this.userControl_DashBoard.TabIndex = 0;
-            // 
             // guna2ElipseAddUser
             // 
             this.guna2ElipseAddUser.TargetControl = this.panel2;
@@ -232,6 +224,14 @@
             this.userControl_AddUser.Name = "userControl_AddUser";
             this.userControl_AddUser.Size = new System.Drawing.Size(1104, 768);
             this.userControl_AddUser.TabIndex = 1;
+            // 
+            // userControl_DashBoard
+            // 
+            this.userControl_DashBoard.BackColor = System.Drawing.Color.White;
+            this.userControl_DashBoard.Location = new System.Drawing.Point(-3, -3);
+            this.userControl_DashBoard.Name = "userControl_DashBoard";
+            this.userControl_DashBoard.Size = new System.Drawing.Size(1104, 768);
+            this.userControl_DashBoard.TabIndex = 0;
             // 
             // AdministratorsForm
             // 

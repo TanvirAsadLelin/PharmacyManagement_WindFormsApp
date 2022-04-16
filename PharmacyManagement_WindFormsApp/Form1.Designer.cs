@@ -33,7 +33,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnExit = new Guna.UI2.WinForms.Guna2Button();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.btnSignIn = new Guna.UI2.WinForms.Guna2Button();
             this.btnReset = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -99,14 +98,6 @@
             this.btnExit.TabIndex = 1;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(172)))), ((int)(((byte)(37)))));
-            this.panel2.Location = new System.Drawing.Point(613, 170);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(4, 500);
-            this.panel2.TabIndex = 2;
-            // 
             // btnSignIn
             // 
             this.btnSignIn.BorderRadius = 16;
@@ -155,7 +146,7 @@
             // 
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(636, 284);
+            this.pictureBox2.Location = new System.Drawing.Point(524, 266);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(237, 264);
             this.pictureBox2.TabIndex = 13;
@@ -171,7 +162,7 @@
             this.groupBoxSignIn.Controls.Add(this.btnSignIn);
             this.groupBoxSignIn.Controls.Add(this.label2);
             this.groupBoxSignIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxSignIn.Location = new System.Drawing.Point(913, 272);
+            this.groupBoxSignIn.Location = new System.Drawing.Point(801, 254);
             this.groupBoxSignIn.Name = "groupBoxSignIn";
             this.groupBoxSignIn.Size = new System.Drawing.Size(395, 314);
             this.groupBoxSignIn.TabIndex = 12;
@@ -233,7 +224,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(864, 188);
+            this.label4.Location = new System.Drawing.Point(752, 170);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(191, 38);
             this.label4.TabIndex = 11;
@@ -268,7 +259,6 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.groupBoxSignIn);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -292,7 +282,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button btnExit;
-        private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2Button btnSignIn;
         private Guna.UI2.WinForms.Guna2Button btnReset;
         private System.Windows.Forms.PictureBox pictureBox2;

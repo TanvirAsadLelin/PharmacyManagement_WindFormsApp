@@ -49,6 +49,9 @@
             this.btnSignUp = new Guna.UI2.WinForms.Guna2Button();
             this.btnReset = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ElipseAddUser = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.pictureBoxCheckUserName = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCheckUserName)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -232,6 +235,7 @@
             this.textBoxUserName.SelectedText = "";
             this.textBoxUserName.Size = new System.Drawing.Size(340, 40);
             this.textBoxUserName.TabIndex = 8;
+            this.textBoxUserName.TextChanged += new System.EventHandler(this.textBoxUserName_TextChanged);
             // 
             // textBoxPassword
             // 
@@ -295,6 +299,7 @@
             this.btnSignUp.Size = new System.Drawing.Size(165, 45);
             this.btnSignUp.TabIndex = 12;
             this.btnSignUp.Text = "Sign Up";
+            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
             // 
             // btnReset
             // 
@@ -316,16 +321,38 @@
             this.btnReset.Size = new System.Drawing.Size(165, 45);
             this.btnReset.TabIndex = 13;
             this.btnReset.Text = "Reset";
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // guna2ElipseAddUser
             // 
             this.guna2ElipseAddUser.TargetControl = this;
+            // 
+            // pictureBoxCheckUserName
+            // 
+            this.pictureBoxCheckUserName.Location = new System.Drawing.Point(990, 284);
+            this.pictureBoxCheckUserName.Name = "pictureBoxCheckUserName";
+            this.pictureBoxCheckUserName.Size = new System.Drawing.Size(40, 40);
+            this.pictureBoxCheckUserName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxCheckUserName.TabIndex = 14;
+            this.pictureBoxCheckUserName.TabStop = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(698, 541);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(285, 22);
+            this.label9.TabIndex = 15;
+            this.label9.Text = "* Check User Role Before Sign Up";
             // 
             // UserControl_AddUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.pictureBoxCheckUserName);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnSignUp);
             this.Controls.Add(this.panel1);
@@ -346,6 +373,7 @@
             this.Controls.Add(this.label1);
             this.Name = "UserControl_AddUser";
             this.Size = new System.Drawing.Size(1104, 768);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCheckUserName)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -372,5 +400,7 @@
         private Guna.UI2.WinForms.Guna2Button btnSignUp;
         private Guna.UI2.WinForms.Guna2Button btnReset;
         private Guna.UI2.WinForms.Guna2Elipse guna2ElipseAddUser;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.PictureBox pictureBoxCheckUserName;
     }
 }

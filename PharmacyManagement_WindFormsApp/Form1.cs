@@ -16,5 +16,7 @@ namespace PharmacyManagement_WindFormsApp
         {
             InitializeComponent();
         }
+
+      
     }
 }

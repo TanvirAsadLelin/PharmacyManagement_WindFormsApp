@@ -1,0 +1,13 @@
+D:\My GitHub\My WinFormApps All Projects\PharmacyManagement_WindFormsApp\PharmacyManagement_WindFormsApp\bin\Debug\PharmacyManagement_WindFormsApp.exe.config
+D:\My GitHub\My WinFormApps All Projects\PharmacyManagement_WindFormsApp\PharmacyManagement_WindFormsApp\bin\Debug\PharmacyManagement_WindFormsApp.exe
+D:\My GitHub\My WinFormApps All Projects\PharmacyManagement_WindFormsApp\PharmacyManagement_WindFormsApp\bin\Debug\PharmacyManagement_WindFormsApp.pdb
+D:\My GitHub\My WinFormApps All Projects\PharmacyManagement_WindFormsApp\PharmacyManagement_WindFormsApp\obj\Debug\PharmacyManagement_WindFormsApp.csproj.AssemblyReference.cache
+D:\My GitHub\My WinFormApps All Projects\PharmacyManagement_WindFormsApp\PharmacyManagement_WindFormsApp\obj\Debug\PharmacyManagement_WindFormsApp.csproj.SuggestedBindingRedirects.cache
+D:\My GitHub\My WinFormApps All Projects\PharmacyManagement_WindFormsApp\PharmacyManagement_WindFormsApp\obj\Debug\PharmacyManagement_WindFormsApp.Form1.resources
+D:\My GitHub\My WinFormApps All Projects\PharmacyManagement_WindFormsApp\PharmacyManagement_WindFormsApp\obj\Debug\PharmacyManagement_WindFormsApp.Properties.Resources.resources
+D:\My GitHub\My WinFormApps All Projects\PharmacyManagement_WindFormsApp\PharmacyManagement_WindFormsApp\obj\Debug\PharmacyManagement_WindFormsApp.csproj.GenerateResource.cache
+D:\My GitHub\My WinFormApps All Projects\PharmacyManagement_WindFormsApp\PharmacyManagement_WindFormsApp\obj\Debug\PharmacyManagement_WindFormsApp.csproj.CoreCompileInputs.cache
+D:\My GitHub\My WinFormApps All Projects\PharmacyManagement_WindFormsApp\PharmacyManagement_WindFormsApp\obj\Debug\PharmacyManagement_WindFormsApp.exe
+D:\My GitHub\My WinFormApps All Projects\PharmacyManagement_WindFormsApp\PharmacyManagement_WindFormsApp\obj\Debug\PharmacyManagement_WindFormsApp.pdb
+D:\My GitHub\My WinFormApps All Projects\PharmacyManagement_WindFormsApp\PharmacyManagement_WindFormsApp\bin\Debug\Guna.UI2.dll
+D:\My GitHub\My WinFormApps All Projects\PharmacyManagement_WindFormsApp\PharmacyManagement_WindFormsApp\obj\Debug\PharmacyManagement_WindFormsApp.csproj.CopyComplete

@@ -49,11 +49,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminstratorsForm.cs">
+    <Compile Include="AdministratorsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminstratorsForm.Designer.cs">
-      <DependentUpon>AdminstratorsForm.cs</DependentUpon>
+    <Compile Include="AdministratorsForm.Designer.cs">
+      <DependentUpon>AdministratorsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdministratorsUC\UserControl_DashBoard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdministratorsUC\UserControl_DashBoard.Designer.cs">
+      <DependentUpon>UserControl_DashBoard.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -63,8 +69,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AdminstratorsForm.resx">
-      <DependentUpon>AdminstratorsForm.cs</DependentUpon>
+    <EmbeddedResource Include="AdministratorsForm.resx">
+      <DependentUpon>AdministratorsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdministratorsUC\UserControl_DashBoard.resx">
+      <DependentUpon>UserControl_DashBoard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

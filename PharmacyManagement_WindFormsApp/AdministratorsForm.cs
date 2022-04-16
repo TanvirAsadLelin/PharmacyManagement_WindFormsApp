@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PharmacyManagement_WindFormsApp
 {
-    public partial class AdminstratorsForm : Form
+    public partial class AdministratorsForm : Form
     {
-        public AdminstratorsForm()
+        public AdministratorsForm()
         {
             InitializeComponent();
         }
@@ -22,6 +22,18 @@ namespace PharmacyManagement_WindFormsApp
             Form1 form1 = new Form1();
             form1.ShowDialog();
             this.Hide();
+        }
+
+        private void btnDashBoard_Click(object sender, EventArgs e)
+        {
+            userControl_DashBoard.Visible = true;
+            userControl_DashBoard.BringToFront(); 
+        }
+
+        private void AdministratorsForm_Load(object sender, EventArgs e)
+        {
+            userControl_DashBoard.Visible=false;
+            btnDashBoard.PerformClick();
         }
     }
 }

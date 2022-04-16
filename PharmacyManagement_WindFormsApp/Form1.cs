@@ -46,7 +46,7 @@ namespace PharmacyManagement_WindFormsApp
         {
             if(txtboxUsername.Text == "lelin" && txtPassword.Text == "123")
             {
-                AdminstratorsForm adminstratorsForm = new AdminstratorsForm();
+                AdministratorsForm adminstratorsForm = new AdministratorsForm();
                 this.Hide();
                 adminstratorsForm.ShowDialog();
              

@@ -16,5 +16,12 @@ namespace PharmacyManagement_WindFormsApp
         {
             InitializeComponent();
         }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.ShowDialog();
+            this.Hide();
+        }
     }
 }

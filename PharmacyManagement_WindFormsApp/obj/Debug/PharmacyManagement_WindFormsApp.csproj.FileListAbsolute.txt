@@ -11,3 +11,4 @@ D:\My GitHub\My WinFormApps All Projects\PharmacyManagement_WindFormsApp\Pharmac
 D:\My GitHub\My WinFormApps All Projects\PharmacyManagement_WindFormsApp\PharmacyManagement_WindFormsApp\obj\Debug\PharmacyManagement_WindFormsApp.pdb
 D:\My GitHub\My WinFormApps All Projects\PharmacyManagement_WindFormsApp\PharmacyManagement_WindFormsApp\bin\Debug\Guna.UI2.dll
 D:\My GitHub\My WinFormApps All Projects\PharmacyManagement_WindFormsApp\PharmacyManagement_WindFormsApp\obj\Debug\PharmacyManagement_WindFormsApp.csproj.CopyComplete
+D:\My GitHub\My WinFormApps All Projects\PharmacyManagement_WindFormsApp\PharmacyManagement_WindFormsApp\obj\Debug\PharmacyManagement_WindFormsApp.AdminstratorsForm.resources

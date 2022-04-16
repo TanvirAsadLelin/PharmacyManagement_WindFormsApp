@@ -55,6 +55,12 @@
     <Compile Include="AdministratorsForm.Designer.cs">
       <DependentUpon>AdministratorsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdministratorsUC\UserControl_AddUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdministratorsUC\UserControl_AddUser.Designer.cs">
+      <DependentUpon>UserControl_AddUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdministratorsUC\UserControl_DashBoard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -71,6 +77,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AdministratorsForm.resx">
       <DependentUpon>AdministratorsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdministratorsUC\UserControl_AddUser.resx">
+      <DependentUpon>UserControl_AddUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdministratorsUC\UserControl_DashBoard.resx">
       <DependentUpon>UserControl_DashBoard.cs</DependentUpon>

@@ -33,7 +33,14 @@ namespace PharmacyManagement_WindFormsApp
         private void AdministratorsForm_Load(object sender, EventArgs e)
         {
             userControl_DashBoard.Visible=false;
+            userControl_AddUser.Visible=false;
             btnDashBoard.PerformClick();
+        }
+
+        private void btnAddUser_Click(object sender, EventArgs e)
+        {
+            userControl_AddUser.Visible = true;
+            userControl_AddUser.BringToFront();
         }
     }
 }

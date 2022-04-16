@@ -42,6 +42,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.guna2ElipseDashboard = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.userControl_DashBoard = new PharmacyManagement_WindFormsApp.AdministratorsUC.UserControl_DashBoard();
+            this.guna2ElipseAddUser = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.userControl_AddUser = new PharmacyManagement_WindFormsApp.AdministratorsUC.UserControl_AddUser();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -154,6 +156,7 @@
             this.btnAddUser.Size = new System.Drawing.Size(263, 45);
             this.btnAddUser.TabIndex = 2;
             this.btnAddUser.Text = "Add User";
+            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
             // 
             // btnDashBoard
             // 
@@ -199,6 +202,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.userControl_AddUser);
             this.panel2.Controls.Add(this.userControl_DashBoard);
             this.panel2.Location = new System.Drawing.Point(276, 0);
             this.panel2.Name = "panel2";
@@ -216,6 +220,18 @@
             this.userControl_DashBoard.Name = "userControl_DashBoard";
             this.userControl_DashBoard.Size = new System.Drawing.Size(1104, 768);
             this.userControl_DashBoard.TabIndex = 0;
+            // 
+            // guna2ElipseAddUser
+            // 
+            this.guna2ElipseAddUser.TargetControl = this.panel2;
+            // 
+            // userControl_AddUser
+            // 
+            this.userControl_AddUser.BackColor = System.Drawing.Color.White;
+            this.userControl_AddUser.Location = new System.Drawing.Point(-3, -3);
+            this.userControl_AddUser.Name = "userControl_AddUser";
+            this.userControl_AddUser.Size = new System.Drawing.Size(1104, 768);
+            this.userControl_AddUser.TabIndex = 1;
             // 
             // AdministratorsForm
             // 
@@ -252,5 +268,7 @@
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Elipse guna2ElipseDashboard;
         private AdministratorsUC.UserControl_DashBoard userControl_DashBoard;
+        private Guna.UI2.WinForms.Guna2Elipse guna2ElipseAddUser;
+        private AdministratorsUC.UserControl_AddUser userControl_AddUser;
     }
 }

@@ -11,7 +11,10 @@ using System.Windows.Forms;
 namespace PharmacyManagement_WindFormsApp
 {
     public partial class Form1 : Form
-    {
+    {    
+        FunctionClass fn = new FunctionClass();
+        string query;
+        DataSet ds;
         public Form1()
         {
             InitializeComponent();
@@ -44,18 +47,61 @@ namespace PharmacyManagement_WindFormsApp
 
         private void btnSignIn_Click(object sender, EventArgs e)
         {
-            if(txtboxUsername.Text == "lelin" && txtPassword.Text == "123")
-            {
-                AdministratorsForm adminstratorsForm = new AdministratorsForm();
-                this.Hide();
-                adminstratorsForm.ShowDialog();
-             
-            }
 
+            query = "select * from Users_Tbl";
+            ds = new DataSet();
+
+            if(ds.Tables[0].Rows.Count == 0)
+            {
+                if(txtboxUsername.Text == "root" && txtPassword.Text == "root")
+                {
+                    AdministratorsForm admin = new AdministratorsForm();
+                    admin.Show();
+                    this.Hide();
+                }
+            }
             else
             {
-                MessageBox.Show("Invalid username or password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                query = "select * from Users_Tbl where UserName = '" + txtboxUsername.Text + "' and '" + txtPassword.Text + "'";
+
+                ds = fn.GetData(query);
+
+                if (ds.Tables[0].Rows.Count != 0)
+                {
+                    string role = ds.Tables[0].Rows[0][1].ToString();
+
+                    if(role == "Administrator")
+                    {
+                        AdministratorsForm admin = new AdministratorsForm();
+                        admin.Show();
+                        this.Hide();
+                    }
+                    else if (role == "Pharmacist")
+                    {
+                        
+                    }
+                }
             }
+
+
+
+
+
+
+            //if(txtboxUsername.Text == "lelin" && txtPassword.Text == "123")
+            //{
+            //    AdministratorsForm adminstratorsForm = new AdministratorsForm();
+            //    this.Hide();
+            //    adminstratorsForm.ShowDialog();
+
+            //}
+
+            //else
+            //{
+            //    MessageBox.Show("Invalid username or password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+
+
         }
     }
 }

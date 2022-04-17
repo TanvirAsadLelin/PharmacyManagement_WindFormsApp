@@ -60,7 +60,7 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(479, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(156, 38);
+            this.label1.Size = new System.Drawing.Size(151, 37);
             this.label1.TabIndex = 1;
             this.label1.Text = "Add User";
             // 
@@ -146,7 +146,7 @@
             this.comboBoxUserRole.ItemHeight = 30;
             this.comboBoxUserRole.Items.AddRange(new object[] {
             "Administrator",
-            "Pharmasist"});
+            "Pharmacist"});
             this.comboBoxUserRole.Location = new System.Drawing.Point(104, 201);
             this.comboBoxUserRole.Name = "comboBoxUserRole";
             this.comboBoxUserRole.Size = new System.Drawing.Size(340, 36);

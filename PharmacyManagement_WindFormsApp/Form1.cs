@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace PharmacyManagement_WindFormsApp
 {
@@ -49,11 +50,10 @@ namespace PharmacyManagement_WindFormsApp
         {
 
             query = "select * from Users_Tbl";
-            ds = new DataSet();
-
-            if(ds.Tables[0].Rows.Count == 0)
+            ds = fn.GetData(query);
+            if (ds.Tables[0].Rows.Count == 0)
             {
-                if(txtboxUsername.Text == "root" && txtPassword.Text == "root")
+                if (txtboxUsername.Text == "root" && txtPassword.Text == "root")
                 {
                     AdministratorsForm admin = new AdministratorsForm();
                     admin.Show();
@@ -62,7 +62,7 @@ namespace PharmacyManagement_WindFormsApp
             }
             else
             {
-                query = "select * from Users_Tbl where UserName = '" + txtboxUsername.Text + "' and '" + txtPassword.Text + "'";
+                query = "select * from Users_Tbl where UserName = '" + txtboxUsername.Text + "' and Password= '" + txtPassword.Text + "'";
 
                 ds = fn.GetData(query);
 
@@ -70,7 +70,7 @@ namespace PharmacyManagement_WindFormsApp
                 {
                     string role = ds.Tables[0].Rows[0][1].ToString();
 
-                    if(role == "Administrator")
+                    if (role == "Administrator")
                     {
                         AdministratorsForm admin = new AdministratorsForm();
                         admin.Show();
@@ -78,12 +78,25 @@ namespace PharmacyManagement_WindFormsApp
                     }
                     else if (role == "Pharmacist")
                     {
-                        
+                        PharmacistForm pharmacist = new PharmacistForm();
+                        pharmacist.Show();
+                        this.Hide();
                     }
+
+                    else if (role == "Customer")
+                    {
+                        // no code here
+                    }
+                    
+                }
+
+                else
+                {
+                    MessageBox.Show("Wrong Username Or Password!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 
-
+        
 
 
 

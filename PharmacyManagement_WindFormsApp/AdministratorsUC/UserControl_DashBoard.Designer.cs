@@ -51,7 +51,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSyncReload = new Guna.UI2.WinForms.Guna2Button();
             this.panelAdmin.SuspendLayout();
             this.panelPharmasist.SuspendLayout();
             this.panelCustomers.SuspendLayout();
@@ -100,10 +100,10 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(13, 520);
+            this.label11.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(44, 526);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(279, 26);
+            this.label11.Size = new System.Drawing.Size(217, 20);
             this.label11.TabIndex = 3;
             this.label11.Text = "Total number of Admin User";
             // 
@@ -157,7 +157,7 @@
             this.lblCountTotalPharmaUser.BackColor = System.Drawing.Color.White;
             this.lblCountTotalPharmaUser.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblCountTotalPharmaUser.Font = new System.Drawing.Font("Times New Roman", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCountTotalPharmaUser.Location = new System.Drawing.Point(115, 565);
+            this.lblCountTotalPharmaUser.Location = new System.Drawing.Point(124, 565);
             this.lblCountTotalPharmaUser.Name = "lblCountTotalPharmaUser";
             this.lblCountTotalPharmaUser.Size = new System.Drawing.Size(58, 44);
             this.lblCountTotalPharmaUser.TabIndex = 7;
@@ -166,10 +166,10 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(14, 520);
+            this.label12.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(43, 526);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(287, 26);
+            this.label12.Size = new System.Drawing.Size(226, 20);
             this.label12.TabIndex = 6;
             this.label12.Text = "Total number of Pharma User";
             // 
@@ -232,10 +232,10 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(16, 520);
+            this.label13.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(54, 526);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(258, 26);
+            this.label13.Size = new System.Drawing.Size(201, 20);
             this.label13.TabIndex = 8;
             this.label13.Text = "Total number of Customer";
             // 
@@ -280,31 +280,32 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // guna2Button1
+            // btnSyncReload
             // 
-            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.White;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.White;
-            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
-            this.guna2Button1.ImageSize = new System.Drawing.Size(35, 35);
-            this.guna2Button1.Location = new System.Drawing.Point(74, 37);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.PressedColor = System.Drawing.Color.White;
-            this.guna2Button1.Size = new System.Drawing.Size(34, 35);
-            this.guna2Button1.TabIndex = 5;
+            this.btnSyncReload.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSyncReload.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSyncReload.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSyncReload.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSyncReload.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSyncReload.FillColor = System.Drawing.Color.White;
+            this.btnSyncReload.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSyncReload.ForeColor = System.Drawing.Color.White;
+            this.btnSyncReload.HoverState.FillColor = System.Drawing.Color.White;
+            this.btnSyncReload.Image = ((System.Drawing.Image)(resources.GetObject("btnSyncReload.Image")));
+            this.btnSyncReload.ImageSize = new System.Drawing.Size(35, 35);
+            this.btnSyncReload.Location = new System.Drawing.Point(74, 37);
+            this.btnSyncReload.Name = "btnSyncReload";
+            this.btnSyncReload.PressedColor = System.Drawing.Color.White;
+            this.btnSyncReload.Size = new System.Drawing.Size(34, 35);
+            this.btnSyncReload.TabIndex = 5;
+            this.btnSyncReload.Click += new System.EventHandler(this.btnSyncReload_Click);
             // 
             // UserControl_DashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.btnSyncReload);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panelCustomers);
             this.Controls.Add(this.panelPharmasist);
@@ -312,6 +313,7 @@
             this.Controls.Add(this.label1);
             this.Name = "UserControl_DashBoard";
             this.Size = new System.Drawing.Size(1104, 768);
+            this.Load += new System.EventHandler(this.UserControl_DashBoard_Load);
             this.panelAdmin.ResumeLayout(false);
             this.panelAdmin.PerformLayout();
             this.panelPharmasist.ResumeLayout(false);
@@ -346,7 +348,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnSyncReload;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

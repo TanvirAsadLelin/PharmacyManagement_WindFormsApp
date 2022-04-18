@@ -14,3 +14,4 @@ D:\My GitHub\My WinFormApps All Projects\PharmacyManagement_WindFormsApp\Pharmac
 D:\My GitHub\My WinFormApps All Projects\PharmacyManagement_WindFormsApp\PharmacyManagement_WindFormsApp\obj\Debug\PharmacyManagement_WindFormsApp.AdministratorsForm.resources
 D:\My GitHub\My WinFormApps All Projects\PharmacyManagement_WindFormsApp\PharmacyManagement_WindFormsApp\obj\Debug\PharmacyManagement_WindFormsApp.AdministratorsUC.UserControl_DashBoard.resources
 D:\My GitHub\My WinFormApps All Projects\PharmacyManagement_WindFormsApp\PharmacyManagement_WindFormsApp\obj\Debug\PharmacyManagement_WindFormsApp.AdministratorsUC.UserControl_AddUser.resources
+D:\My GitHub\My WinFormApps All Projects\PharmacyManagement_WindFormsApp\PharmacyManagement_WindFormsApp\obj\Debug\PharmacyManagement_WindFormsApp.AdministratorsUC.UserControl_ViewUser.resources

@@ -31,28 +31,30 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdministratorsForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblUsername = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.guna2ElipseDashboard = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2ElipseAddUser = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btnLogOut = new Guna.UI2.WinForms.Guna2Button();
             this.btnProfile = new Guna.UI2.WinForms.Guna2Button();
             this.btnViewUser = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddUser = new Guna.UI2.WinForms.Guna2Button();
             this.btnDashBoard = new Guna.UI2.WinForms.Guna2Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.guna2ElipseDashboard = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2ElipseAddUser = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.gunaElipseViewUser = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.userControl_AddUser = new PharmacyManagement_WindFormsApp.AdministratorsUC.UserControl_AddUser();
             this.userControl_DashBoard = new PharmacyManagement_WindFormsApp.AdministratorsUC.UserControl_DashBoard();
+            this.userControl_ViewUser1 = new PharmacyManagement_WindFormsApp.AdministratorsUC.UserControl_ViewUser();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.lblUsername);
             this.panel1.Controls.Add(this.btnLogOut);
             this.panel1.Controls.Add(this.btnProfile);
             this.panel1.Controls.Add(this.btnViewUser);
@@ -65,16 +67,45 @@
             this.panel1.Size = new System.Drawing.Size(275, 770);
             this.panel1.TabIndex = 0;
             // 
-            // label2
+            // lblUsername
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(42, 690);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(206, 34);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Md Tanvir Asad";
+            this.lblUsername.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblUsername.Location = new System.Drawing.Point(0, 690);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(275, 34);
+            this.lblUsername.TabIndex = 3;
+            this.lblUsername.Text = "Md Tanvir Asad";
+            this.lblUsername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(21, 203);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(243, 42);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Administrator";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.userControl_ViewUser1);
+            this.panel2.Controls.Add(this.userControl_AddUser);
+            this.panel2.Controls.Add(this.userControl_DashBoard);
+            this.panel2.Location = new System.Drawing.Point(276, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1104, 768);
+            this.panel2.TabIndex = 1;
+            // 
+            // guna2ElipseDashboard
+            // 
+            this.guna2ElipseDashboard.TargetControl = this.panel2;
+            // 
+            // guna2ElipseAddUser
+            // 
+            this.guna2ElipseAddUser.TargetControl = this.panel2;
             // 
             // btnLogOut
             // 
@@ -136,6 +167,7 @@
             this.btnViewUser.Size = new System.Drawing.Size(263, 45);
             this.btnViewUser.TabIndex = 2;
             this.btnViewUser.Text = "View User";
+            this.btnViewUser.Click += new System.EventHandler(this.btnViewUser_Click);
             // 
             // btnAddUser
             // 
@@ -179,17 +211,6 @@
             this.btnDashBoard.Text = "Dashboard";
             this.btnDashBoard.Click += new System.EventHandler(this.btnDashBoard_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(21, 203);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(243, 42);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Administrator";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -200,22 +221,9 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // panel2
+            // gunaElipseViewUser
             // 
-            this.panel2.Controls.Add(this.userControl_AddUser);
-            this.panel2.Controls.Add(this.userControl_DashBoard);
-            this.panel2.Location = new System.Drawing.Point(276, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1104, 768);
-            this.panel2.TabIndex = 1;
-            // 
-            // guna2ElipseDashboard
-            // 
-            this.guna2ElipseDashboard.TargetControl = this.panel2;
-            // 
-            // guna2ElipseAddUser
-            // 
-            this.guna2ElipseAddUser.TargetControl = this.panel2;
+            this.gunaElipseViewUser.TargetControl = this.panel2;
             // 
             // userControl_AddUser
             // 
@@ -233,6 +241,14 @@
             this.userControl_DashBoard.Size = new System.Drawing.Size(1104, 768);
             this.userControl_DashBoard.TabIndex = 0;
             // 
+            // userControl_ViewUser1
+            // 
+            this.userControl_ViewUser1.BackColor = System.Drawing.Color.White;
+            this.userControl_ViewUser1.Location = new System.Drawing.Point(-3, -3);
+            this.userControl_ViewUser1.Name = "userControl_ViewUser1";
+            this.userControl_ViewUser1.Size = new System.Drawing.Size(1104, 768);
+            this.userControl_ViewUser1.TabIndex = 2;
+            // 
             // AdministratorsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -248,8 +264,8 @@
             this.Load += new System.EventHandler(this.AdministratorsForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -265,10 +281,12 @@
         private Guna.UI2.WinForms.Guna2Button btnProfile;
         private Guna.UI2.WinForms.Guna2Button btnViewUser;
         private Guna.UI2.WinForms.Guna2Button btnAddUser;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblUsername;
         private Guna.UI2.WinForms.Guna2Elipse guna2ElipseDashboard;
         private AdministratorsUC.UserControl_DashBoard userControl_DashBoard;
         private Guna.UI2.WinForms.Guna2Elipse guna2ElipseAddUser;
         private AdministratorsUC.UserControl_AddUser userControl_AddUser;
+        private Guna.UI2.WinForms.Guna2Elipse gunaElipseViewUser;
+        private AdministratorsUC.UserControl_ViewUser userControl_ViewUser1;
     }
 }

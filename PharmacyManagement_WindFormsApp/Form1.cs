@@ -72,7 +72,7 @@ namespace PharmacyManagement_WindFormsApp
 
                     if (role == "Administrator")
                     {
-                        AdministratorsForm admin = new AdministratorsForm();
+                        AdministratorsForm admin = new AdministratorsForm(txtboxUsername.Text);
                         admin.Show();
                         this.Hide();
                     }

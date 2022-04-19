@@ -35,13 +35,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControl_ViewUser));
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.DataGridViewFORViewUser = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.txtSearchByUserName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.dataGridViewFORViewUser = new Guna.UI2.WinForms.Guna2DataGridView();
             this.btnSyncReload = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
             this.gunaElipseViewUser = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridViewFORViewUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFORViewUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,39 +66,40 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Username: ";
             // 
-            // guna2TextBox1
+            // txtSearchByUserName
             // 
-            this.guna2TextBox1.BorderThickness = 2;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Times New Roman", 10.8F);
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(779, 145);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.guna2TextBox1.PlaceholderText = "Search by username!";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(291, 44);
-            this.guna2TextBox1.TabIndex = 5;
-            this.guna2TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSearchByUserName.BorderThickness = 2;
+            this.txtSearchByUserName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearchByUserName.DefaultText = "";
+            this.txtSearchByUserName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearchByUserName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearchByUserName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchByUserName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchByUserName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchByUserName.Font = new System.Drawing.Font("Times New Roman", 10.8F);
+            this.txtSearchByUserName.ForeColor = System.Drawing.Color.Black;
+            this.txtSearchByUserName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchByUserName.Location = new System.Drawing.Point(779, 145);
+            this.txtSearchByUserName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtSearchByUserName.Name = "txtSearchByUserName";
+            this.txtSearchByUserName.PasswordChar = '\0';
+            this.txtSearchByUserName.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtSearchByUserName.PlaceholderText = "Search by username!";
+            this.txtSearchByUserName.SelectedText = "";
+            this.txtSearchByUserName.Size = new System.Drawing.Size(291, 44);
+            this.txtSearchByUserName.TabIndex = 5;
+            this.txtSearchByUserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSearchByUserName.TextChanged += new System.EventHandler(this.txtSearchByUserName_TextChanged);
             // 
-            // DataGridViewFORViewUser
+            // dataGridViewFORViewUser
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.DataGridViewFORViewUser.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.DataGridViewFORViewUser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DataGridViewFORViewUser.BackgroundColor = System.Drawing.Color.White;
-            this.DataGridViewFORViewUser.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.DataGridViewFORViewUser.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.DataGridViewFORViewUser.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridViewFORViewUser.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewFORViewUser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewFORViewUser.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewFORViewUser.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridViewFORViewUser.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataGridViewFORViewUser.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -106,8 +107,8 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridViewFORViewUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.DataGridViewFORViewUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewFORViewUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewFORViewUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -115,38 +116,39 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGridViewFORViewUser.DefaultCellStyle = dataGridViewCellStyle3;
-            this.DataGridViewFORViewUser.EnableHeadersVisualStyles = false;
-            this.DataGridViewFORViewUser.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DataGridViewFORViewUser.Location = new System.Drawing.Point(25, 237);
-            this.DataGridViewFORViewUser.Name = "DataGridViewFORViewUser";
-            this.DataGridViewFORViewUser.RowHeadersVisible = false;
-            this.DataGridViewFORViewUser.RowHeadersWidth = 51;
-            this.DataGridViewFORViewUser.RowTemplate.Height = 24;
-            this.DataGridViewFORViewUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataGridViewFORViewUser.Size = new System.Drawing.Size(1045, 434);
-            this.DataGridViewFORViewUser.TabIndex = 6;
-            this.DataGridViewFORViewUser.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.DataGridViewFORViewUser.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.DataGridViewFORViewUser.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.DataGridViewFORViewUser.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.DataGridViewFORViewUser.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.DataGridViewFORViewUser.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.DataGridViewFORViewUser.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DataGridViewFORViewUser.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.DataGridViewFORViewUser.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.DataGridViewFORViewUser.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.DataGridViewFORViewUser.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.DataGridViewFORViewUser.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridViewFORViewUser.ThemeStyle.HeaderStyle.Height = 4;
-            this.DataGridViewFORViewUser.ThemeStyle.ReadOnly = false;
-            this.DataGridViewFORViewUser.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.DataGridViewFORViewUser.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.DataGridViewFORViewUser.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.DataGridViewFORViewUser.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.DataGridViewFORViewUser.ThemeStyle.RowsStyle.Height = 24;
-            this.DataGridViewFORViewUser.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DataGridViewFORViewUser.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dataGridViewFORViewUser.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewFORViewUser.EnableHeadersVisualStyles = false;
+            this.dataGridViewFORViewUser.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataGridViewFORViewUser.Location = new System.Drawing.Point(25, 237);
+            this.dataGridViewFORViewUser.Name = "dataGridViewFORViewUser";
+            this.dataGridViewFORViewUser.RowHeadersVisible = false;
+            this.dataGridViewFORViewUser.RowHeadersWidth = 51;
+            this.dataGridViewFORViewUser.RowTemplate.Height = 24;
+            this.dataGridViewFORViewUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewFORViewUser.Size = new System.Drawing.Size(1045, 434);
+            this.dataGridViewFORViewUser.TabIndex = 6;
+            this.dataGridViewFORViewUser.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dataGridViewFORViewUser.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dataGridViewFORViewUser.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dataGridViewFORViewUser.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dataGridViewFORViewUser.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dataGridViewFORViewUser.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dataGridViewFORViewUser.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataGridViewFORViewUser.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dataGridViewFORViewUser.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridViewFORViewUser.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.dataGridViewFORViewUser.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dataGridViewFORViewUser.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewFORViewUser.ThemeStyle.HeaderStyle.Height = 4;
+            this.dataGridViewFORViewUser.ThemeStyle.ReadOnly = false;
+            this.dataGridViewFORViewUser.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dataGridViewFORViewUser.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataGridViewFORViewUser.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.dataGridViewFORViewUser.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dataGridViewFORViewUser.ThemeStyle.RowsStyle.Height = 24;
+            this.dataGridViewFORViewUser.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataGridViewFORViewUser.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dataGridViewFORViewUser.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewFORViewUser_CellClick);
             // 
             // btnSyncReload
             // 
@@ -166,6 +168,7 @@
             this.btnSyncReload.PressedColor = System.Drawing.Color.White;
             this.btnSyncReload.Size = new System.Drawing.Size(34, 35);
             this.btnSyncReload.TabIndex = 8;
+            this.btnSyncReload.Click += new System.EventHandler(this.btnSyncReload_Click);
             // 
             // pictureBox1
             // 
@@ -197,6 +200,7 @@
             this.btnDelete.Size = new System.Drawing.Size(165, 45);
             this.btnDelete.TabIndex = 13;
             this.btnDelete.Text = "Delete";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // gunaElipseViewUser
             // 
@@ -210,14 +214,14 @@
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnSyncReload);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.DataGridViewFORViewUser);
-            this.Controls.Add(this.guna2TextBox1);
+            this.Controls.Add(this.dataGridViewFORViewUser);
+            this.Controls.Add(this.txtSearchByUserName);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Name = "UserControl_ViewUser";
             this.Size = new System.Drawing.Size(1104, 768);
             this.Load += new System.EventHandler(this.UserControl_ViewUser_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridViewFORViewUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFORViewUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -228,8 +232,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2DataGridView DataGridViewFORViewUser;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearchByUserName;
+        private Guna.UI2.WinForms.Guna2DataGridView dataGridViewFORViewUser;
         private Guna.UI2.WinForms.Guna2Button btnSyncReload;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2Button btnDelete;

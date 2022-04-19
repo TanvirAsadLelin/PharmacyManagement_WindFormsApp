@@ -12,14 +12,22 @@ namespace PharmacyManagement_WindFormsApp
 {
     public partial class AdministratorsForm : Form
     {
+        string user = "";
         public AdministratorsForm()
         {
             InitializeComponent();
         }
-        public AdministratorsForm(string user)
+    public string Id
+        {
+            get { return user.ToString(); }
+        }
+
+        public AdministratorsForm(string username)
         {
             InitializeComponent();
-            lblUsername.Text = user;
+            lblUsername.Text = username;
+            user = username; 
+            userControl_ViewUser1.Id = Id;
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)

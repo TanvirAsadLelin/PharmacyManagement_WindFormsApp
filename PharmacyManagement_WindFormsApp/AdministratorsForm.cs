@@ -28,6 +28,7 @@ namespace PharmacyManagement_WindFormsApp
             lblUsername.Text = username;
             user = username; 
             userControl_ViewUser1.Id = Id;
+            userControl_UserProfile1.Id = Id;
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
@@ -48,6 +49,7 @@ namespace PharmacyManagement_WindFormsApp
             userControl_DashBoard.Visible=false;
             userControl_AddUser.Visible=false;
             userControl_ViewUser1.Visible=false;
+            userControl_UserProfile1.Visible=false;
             btnDashBoard.PerformClick();
         }
 
@@ -61,6 +63,12 @@ namespace PharmacyManagement_WindFormsApp
         {
             userControl_ViewUser1.Visible = true;
             userControl_ViewUser1.BringToFront();
+        }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            userControl_UserProfile1.Visible = true;
+            userControl_UserProfile1.BringToFront();
         }
     }
 }

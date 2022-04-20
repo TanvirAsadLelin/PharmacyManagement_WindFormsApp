@@ -36,16 +36,18 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.guna2ElipseDashboard = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ElipseAddUser = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.gunaElipseViewUser = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btnLogOut = new Guna.UI2.WinForms.Guna2Button();
             this.btnProfile = new Guna.UI2.WinForms.Guna2Button();
             this.btnViewUser = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddUser = new Guna.UI2.WinForms.Guna2Button();
             this.btnDashBoard = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.gunaElipseViewUser = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2ElipseUserProfile = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.userControl_ViewUser1 = new PharmacyManagement_WindFormsApp.AdministratorsUC.UserControl_ViewUser();
             this.userControl_AddUser = new PharmacyManagement_WindFormsApp.AdministratorsUC.UserControl_AddUser();
             this.userControl_DashBoard = new PharmacyManagement_WindFormsApp.AdministratorsUC.UserControl_DashBoard();
-            this.userControl_ViewUser1 = new PharmacyManagement_WindFormsApp.AdministratorsUC.UserControl_ViewUser();
+            this.userControl_UserProfile1 = new PharmacyManagement_WindFormsApp.AdministratorsUC.UserControl_UserProfile();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -91,6 +93,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.userControl_UserProfile1);
             this.panel2.Controls.Add(this.userControl_ViewUser1);
             this.panel2.Controls.Add(this.userControl_AddUser);
             this.panel2.Controls.Add(this.userControl_DashBoard);
@@ -106,6 +109,10 @@
             // guna2ElipseAddUser
             // 
             this.guna2ElipseAddUser.TargetControl = this.panel2;
+            // 
+            // gunaElipseViewUser
+            // 
+            this.gunaElipseViewUser.TargetControl = this.panel2;
             // 
             // btnLogOut
             // 
@@ -147,6 +154,7 @@
             this.btnProfile.Size = new System.Drawing.Size(263, 45);
             this.btnProfile.TabIndex = 2;
             this.btnProfile.Text = "Profile";
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
             // btnViewUser
             // 
@@ -221,9 +229,17 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // gunaElipseViewUser
+            // guna2ElipseUserProfile
             // 
-            this.gunaElipseViewUser.TargetControl = this.panel2;
+            this.guna2ElipseUserProfile.TargetControl = this.panel2;
+            // 
+            // userControl_ViewUser1
+            // 
+            this.userControl_ViewUser1.BackColor = System.Drawing.Color.White;
+            this.userControl_ViewUser1.Location = new System.Drawing.Point(-3, -3);
+            this.userControl_ViewUser1.Name = "userControl_ViewUser1";
+            this.userControl_ViewUser1.Size = new System.Drawing.Size(1104, 768);
+            this.userControl_ViewUser1.TabIndex = 2;
             // 
             // userControl_AddUser
             // 
@@ -241,13 +257,12 @@
             this.userControl_DashBoard.Size = new System.Drawing.Size(1104, 768);
             this.userControl_DashBoard.TabIndex = 0;
             // 
-            // userControl_ViewUser1
+            // userControl_UserProfile1
             // 
-            this.userControl_ViewUser1.BackColor = System.Drawing.Color.White;
-            this.userControl_ViewUser1.Location = new System.Drawing.Point(-3, -3);
-            this.userControl_ViewUser1.Name = "userControl_ViewUser1";
-            this.userControl_ViewUser1.Size = new System.Drawing.Size(1104, 768);
-            this.userControl_ViewUser1.TabIndex = 2;
+            this.userControl_UserProfile1.Location = new System.Drawing.Point(-3, -3);
+            this.userControl_UserProfile1.Name = "userControl_UserProfile1";
+            this.userControl_UserProfile1.Size = new System.Drawing.Size(1104, 768);
+            this.userControl_UserProfile1.TabIndex = 3;
             // 
             // AdministratorsForm
             // 
@@ -288,5 +303,7 @@
         private AdministratorsUC.UserControl_AddUser userControl_AddUser;
         private Guna.UI2.WinForms.Guna2Elipse gunaElipseViewUser;
         private AdministratorsUC.UserControl_ViewUser userControl_ViewUser1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2ElipseUserProfile;
+        private AdministratorsUC.UserControl_UserProfile userControl_UserProfile1;
     }
 }

@@ -16,5 +16,24 @@ namespace PharmacyManagement_WindFormsApp
         {
             InitializeComponent();
         }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.Show();
+            this.Hide();
+        }
+
+        private void btnDashBoardPharmacist_Click(object sender, EventArgs e)
+        {
+            userControl_P_DashBoard1.Visible = true;
+            userControl_P_DashBoard1.BringToFront();
+        }
+
+        private void PharmacistForm_Load(object sender, EventArgs e)
+        {
+            userControl_P_DashBoard1.Visible=false;
+            btnDashBoardPharmacist.PerformClick();
+        }
     }
 }

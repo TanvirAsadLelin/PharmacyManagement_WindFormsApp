@@ -34,6 +34,7 @@ namespace PharmacyManagement_WindFormsApp
         {
             userControl_P_DashBoard1.Visible=false;
             userControl_P_AddMedicine1.Visible=false;
+            userControl_P_ViewMedicine1.Visible = false;
             btnDashBoardPharmacist.PerformClick();
         }
 
@@ -41,6 +42,12 @@ namespace PharmacyManagement_WindFormsApp
         {
             userControl_P_AddMedicine1.Visible = true;
             userControl_P_AddMedicine1.BringToFront();
+        }
+
+        private void btnViewMedicine_Click(object sender, EventArgs e)
+        {
+            userControl_P_ViewMedicine1.Visible= true;
+            userControl_P_ViewMedicine1.BringToFront();
         }
     }
 }

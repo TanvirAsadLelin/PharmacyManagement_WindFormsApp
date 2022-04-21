@@ -105,6 +105,12 @@
     <Compile Include="PharmacistUC\UserControl_P_DashBoard.Designer.cs">
       <DependentUpon>UserControl_P_DashBoard.cs</DependentUpon>
     </Compile>
+    <Compile Include="PharmacistUC\UserControl_P_ViewMedicine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PharmacistUC\UserControl_P_ViewMedicine.Designer.cs">
+      <DependentUpon>UserControl_P_ViewMedicine.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AdministratorsForm.resx">
@@ -133,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PharmacistUC\UserControl_P_DashBoard.resx">
       <DependentUpon>UserControl_P_DashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PharmacistUC\UserControl_P_ViewMedicine.resx">
+      <DependentUpon>UserControl_P_ViewMedicine.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

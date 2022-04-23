@@ -36,6 +36,7 @@ namespace PharmacyManagement_WindFormsApp
             userControl_P_AddMedicine1.Visible=false;
             userControl_P_ViewMedicine1.Visible = false;
             userControl_P_UpdateMedicine1.Visible = false;  
+            userControl_P_MedicineValidityCheck1.Visible=false;
             btnDashBoardPharmacist.PerformClick();
         }
 
@@ -55,6 +56,12 @@ namespace PharmacyManagement_WindFormsApp
         {
             userControl_P_UpdateMedicine1.Visible = true ;
             userControl_P_UpdateMedicine1.BringToFront();
+        }
+
+        private void btnValidityCheck_Click(object sender, EventArgs e)
+        {
+            userControl_P_MedicineValidityCheck1.Visible=true;
+            userControl_P_MedicineValidityCheck1.BringToFront();
         }
     }
 }

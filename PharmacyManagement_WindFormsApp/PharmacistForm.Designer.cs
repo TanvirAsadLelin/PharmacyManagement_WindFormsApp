@@ -31,10 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PharmacistForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.guna2ElipseDashBoard = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2ElipseAddMedicine = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btnLogOut = new Guna.UI2.WinForms.Guna2Button();
             this.btnSellMedicine = new Guna.UI2.WinForms.Guna2Button();
             this.btnValidityCheck = new Guna.UI2.WinForms.Guna2Button();
@@ -42,14 +38,20 @@
             this.btnViewMedicine = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddMedicine = new Guna.UI2.WinForms.Guna2Button();
             this.btnDashBoardPharmacist = new Guna.UI2.WinForms.Guna2Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.guna2ElipseDashBoard = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2ElipseAddMedicine = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ElipseViewMedicine = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2ElipseUpdateMedicine = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.userControl_P_ViewMedicine1 = new PharmacyManagement_WindFormsApp.PharmacistUC.UserControl_P_ViewMedicine();
             this.userControl_P_AddMedicine1 = new PharmacyManagement_WindFormsApp.PharmacistUC.UserControl_P_AddMedicine();
             this.userControl_P_DashBoard1 = new PharmacyManagement_WindFormsApp.PharmacistUC.UserControl_P_DashBoard();
-            this.userControl_P_ViewMedicine1 = new PharmacyManagement_WindFormsApp.PharmacistUC.UserControl_P_ViewMedicine();
+            this.userControl_P_UpdateMedicine1 = new PharmacyManagement_WindFormsApp.PharmacistUC.UserControl_P_UpdateMedicine();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -68,35 +70,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(275, 780);
             this.panel1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(0, 191);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(272, 42);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Pharmacists";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.userControl_P_ViewMedicine1);
-            this.panel2.Controls.Add(this.userControl_P_AddMedicine1);
-            this.panel2.Controls.Add(this.userControl_P_DashBoard1);
-            this.panel2.Location = new System.Drawing.Point(278, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1097, 780);
-            this.panel2.TabIndex = 1;
-            // 
-            // guna2ElipseDashBoard
-            // 
-            this.guna2ElipseDashBoard.TargetControl = this.panel2;
-            // 
-            // guna2ElipseAddMedicine
-            // 
-            this.guna2ElipseAddMedicine.TargetControl = this.panel2;
             // 
             // btnLogOut
             // 
@@ -178,6 +151,7 @@
             this.btnModifyMedicine.Size = new System.Drawing.Size(263, 45);
             this.btnModifyMedicine.TabIndex = 4;
             this.btnModifyMedicine.Text = "Modify Medicine";
+            this.btnModifyMedicine.Click += new System.EventHandler(this.btnModifyMedicine_Click);
             // 
             // btnViewMedicine
             // 
@@ -242,6 +216,17 @@
             this.btnDashBoardPharmacist.Text = "Dashboard";
             this.btnDashBoardPharmacist.Click += new System.EventHandler(this.btnDashBoardPharmacist_Click);
             // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(0, 191);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(272, 42);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Pharmacists";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -252,9 +237,40 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.userControl_P_UpdateMedicine1);
+            this.panel2.Controls.Add(this.userControl_P_ViewMedicine1);
+            this.panel2.Controls.Add(this.userControl_P_AddMedicine1);
+            this.panel2.Controls.Add(this.userControl_P_DashBoard1);
+            this.panel2.Location = new System.Drawing.Point(278, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1097, 780);
+            this.panel2.TabIndex = 1;
+            // 
+            // guna2ElipseDashBoard
+            // 
+            this.guna2ElipseDashBoard.TargetControl = this.panel2;
+            // 
+            // guna2ElipseAddMedicine
+            // 
+            this.guna2ElipseAddMedicine.TargetControl = this.panel2;
+            // 
             // guna2ElipseViewMedicine
             // 
             this.guna2ElipseViewMedicine.TargetControl = this.panel2;
+            // 
+            // guna2ElipseUpdateMedicine
+            // 
+            this.guna2ElipseUpdateMedicine.TargetControl = this.panel2;
+            // 
+            // userControl_P_ViewMedicine1
+            // 
+            this.userControl_P_ViewMedicine1.BackColor = System.Drawing.Color.White;
+            this.userControl_P_ViewMedicine1.Location = new System.Drawing.Point(0, -3);
+            this.userControl_P_ViewMedicine1.Name = "userControl_P_ViewMedicine1";
+            this.userControl_P_ViewMedicine1.Size = new System.Drawing.Size(1097, 780);
+            this.userControl_P_ViewMedicine1.TabIndex = 2;
             // 
             // userControl_P_AddMedicine1
             // 
@@ -272,13 +288,13 @@
             this.userControl_P_DashBoard1.Size = new System.Drawing.Size(1097, 780);
             this.userControl_P_DashBoard1.TabIndex = 0;
             // 
-            // userControl_P_ViewMedicine1
+            // userControl_P_UpdateMedicine1
             // 
-            this.userControl_P_ViewMedicine1.BackColor = System.Drawing.Color.White;
-            this.userControl_P_ViewMedicine1.Location = new System.Drawing.Point(0, -3);
-            this.userControl_P_ViewMedicine1.Name = "userControl_P_ViewMedicine1";
-            this.userControl_P_ViewMedicine1.Size = new System.Drawing.Size(1097, 780);
-            this.userControl_P_ViewMedicine1.TabIndex = 2;
+            this.userControl_P_UpdateMedicine1.BackColor = System.Drawing.Color.White;
+            this.userControl_P_UpdateMedicine1.Location = new System.Drawing.Point(0, -3);
+            this.userControl_P_UpdateMedicine1.Name = "userControl_P_UpdateMedicine1";
+            this.userControl_P_UpdateMedicine1.Size = new System.Drawing.Size(1097, 780);
+            this.userControl_P_UpdateMedicine1.TabIndex = 3;
             // 
             // PharmacistForm
             // 
@@ -294,8 +310,8 @@
             this.Text = "PharmacistForm";
             this.Load += new System.EventHandler(this.PharmacistForm_Load);
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -319,5 +335,7 @@
         private PharmacistUC.UserControl_P_AddMedicine userControl_P_AddMedicine1;
         private Guna.UI2.WinForms.Guna2Elipse guna2ElipseViewMedicine;
         private PharmacistUC.UserControl_P_ViewMedicine userControl_P_ViewMedicine1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2ElipseUpdateMedicine;
+        private PharmacistUC.UserControl_P_UpdateMedicine userControl_P_UpdateMedicine1;
     }
 }

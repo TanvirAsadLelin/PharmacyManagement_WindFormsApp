@@ -60,6 +60,8 @@ namespace PharmacyManagement_WindFormsApp
                     this.Hide();
                 }
             }
+
+
             else
             {
                 query = "select * from Users_Tbl where UserName = '" + txtboxUsername.Text + "' and Password= '" + txtPassword.Text + "'";

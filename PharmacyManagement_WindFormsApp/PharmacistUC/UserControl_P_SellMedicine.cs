@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DGVPrinterHelper;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -154,6 +155,7 @@ namespace PharmacyManagement_WindFormsApp.PharmacistUC
             }
         }
 
+   
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
@@ -195,6 +197,27 @@ namespace PharmacyManagement_WindFormsApp.PharmacistUC
             dateTimeExpire.ResetText();
             txtPricePerUnit.Clear();
             txtNumberOfUnits.Clear();
+        }
+
+        private void btnPurchasePrint_Click(object sender, EventArgs e)
+        {
+            DGVPrinter print = new DGVPrinter();
+            print.Title = "Medicine Bill";
+            print.SubTitle = String.Format("Date: {0}", DateTime.Now.Date);
+            print.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+            print.PageNumbers = true;
+            print.PageNumberInHeader = false;
+            print.PorportionalColumns = true;
+            print.HeaderCellAlignment = StringAlignment.Near;
+            print.Footer = "Total Payable Amount: " + lblPriceShow.Text;
+            print.FooterSpacing = 15;
+            print.PrintDataGridView(dataGridViewAddCartMedicineList);
+
+            totalAmount = 0;
+            lblPriceShow.Text = "BDT: 00";
+            dataGridViewAddCartMedicineList.DataSource = 0;
+
+             
         }
     }
 }

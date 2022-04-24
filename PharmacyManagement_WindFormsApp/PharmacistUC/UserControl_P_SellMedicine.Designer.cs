@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControl_P_SellMedicine));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSyncReload = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -50,12 +50,18 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtBoxTotalPrice = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAddToCart = new Guna.UI2.WinForms.Guna2Button();
             this.dataGridViewAddCartMedicineList = new Guna.UI2.WinForms.Guna2DataGridView();
             this.btnRemove = new Guna.UI2.WinForms.Guna2Button();
             this.btnPurchasePrint = new Guna.UI2.WinForms.Guna2Button();
             this.lblPriceShow = new System.Windows.Forms.Label();
             this.guna2ElipseSellMedicine = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAddCartMedicineList)).BeginInit();
             this.SuspendLayout();
@@ -89,6 +95,7 @@
             this.btnSyncReload.PressedColor = System.Drawing.Color.White;
             this.btnSyncReload.Size = new System.Drawing.Size(45, 41);
             this.btnSyncReload.TabIndex = 10;
+            this.btnSyncReload.Click += new System.EventHandler(this.btnSyncReload_Click);
             // 
             // pictureBox1
             // 
@@ -123,6 +130,7 @@
             this.txtBoxSearch.Size = new System.Drawing.Size(210, 36);
             this.txtBoxSearch.TabIndex = 12;
             this.txtBoxSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtBoxSearch.TextChanged += new System.EventHandler(this.txtBoxSearch_TextChanged);
             // 
             // listBoxMedicineList
             // 
@@ -133,6 +141,7 @@
             this.listBoxMedicineList.Name = "listBoxMedicineList";
             this.listBoxMedicineList.Size = new System.Drawing.Size(210, 584);
             this.listBoxMedicineList.TabIndex = 13;
+            this.listBoxMedicineList.SelectedIndexChanged += new System.EventHandler(this.listBoxMedicineList_SelectedIndexChanged);
             // 
             // txtMedicineName
             // 
@@ -274,6 +283,7 @@
             this.txtNumberOfUnits.SelectedText = "";
             this.txtNumberOfUnits.Size = new System.Drawing.Size(340, 36);
             this.txtNumberOfUnits.TabIndex = 23;
+            this.txtNumberOfUnits.TextChanged += new System.EventHandler(this.txtNumberOfUnits_TextChanged);
             // 
             // label7
             // 
@@ -318,53 +328,61 @@
             this.txtBoxTotalPrice.Size = new System.Drawing.Size(340, 36);
             this.txtBoxTotalPrice.TabIndex = 23;
             // 
-            // btnAdd
+            // btnAddToCart
             // 
-            this.btnAdd.BorderRadius = 16;
-            this.btnAdd.BorderThickness = 1;
-            this.btnAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(148)))), ((int)(((byte)(184)))));
-            this.btnAdd.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.HoverState.FillColor = System.Drawing.Color.White;
-            this.btnAdd.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(148)))), ((int)(((byte)(184)))));
-            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnAdd.Location = new System.Drawing.Point(812, 338);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(227, 45);
-            this.btnAdd.TabIndex = 24;
-            this.btnAdd.Text = "Add to Card";
+            this.btnAddToCart.BorderRadius = 16;
+            this.btnAddToCart.BorderThickness = 1;
+            this.btnAddToCart.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddToCart.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddToCart.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddToCart.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddToCart.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(148)))), ((int)(((byte)(184)))));
+            this.btnAddToCart.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddToCart.ForeColor = System.Drawing.Color.White;
+            this.btnAddToCart.HoverState.FillColor = System.Drawing.Color.White;
+            this.btnAddToCart.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(148)))), ((int)(((byte)(184)))));
+            this.btnAddToCart.Image = ((System.Drawing.Image)(resources.GetObject("btnAddToCart.Image")));
+            this.btnAddToCart.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnAddToCart.Location = new System.Drawing.Point(812, 338);
+            this.btnAddToCart.Name = "btnAddToCart";
+            this.btnAddToCart.Size = new System.Drawing.Size(227, 45);
+            this.btnAddToCart.TabIndex = 24;
+            this.btnAddToCart.Text = "Add to Card";
+            this.btnAddToCart.Click += new System.EventHandler(this.btnAddToCart_Click);
             // 
             // dataGridViewAddCartMedicineList
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dataGridViewAddCartMedicineList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dataGridViewAddCartMedicineList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewAddCartMedicineList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewAddCartMedicineList.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewAddCartMedicineList.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridViewAddCartMedicineList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGridViewAddCartMedicineList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewAddCartMedicineList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewAddCartMedicineList.ColumnHeadersHeight = 4;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewAddCartMedicineList.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(148)))), ((int)(((byte)(184)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewAddCartMedicineList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridViewAddCartMedicineList.ColumnHeadersHeight = 45;
+            this.dataGridViewAddCartMedicineList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6});
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewAddCartMedicineList.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewAddCartMedicineList.EnableHeadersVisualStyles = false;
             this.dataGridViewAddCartMedicineList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dataGridViewAddCartMedicineList.Location = new System.Drawing.Point(298, 405);
@@ -387,7 +405,7 @@
             this.dataGridViewAddCartMedicineList.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.dataGridViewAddCartMedicineList.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dataGridViewAddCartMedicineList.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dataGridViewAddCartMedicineList.ThemeStyle.HeaderStyle.Height = 4;
+            this.dataGridViewAddCartMedicineList.ThemeStyle.HeaderStyle.Height = 45;
             this.dataGridViewAddCartMedicineList.ThemeStyle.ReadOnly = false;
             this.dataGridViewAddCartMedicineList.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dataGridViewAddCartMedicineList.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -396,6 +414,7 @@
             this.dataGridViewAddCartMedicineList.ThemeStyle.RowsStyle.Height = 24;
             this.dataGridViewAddCartMedicineList.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dataGridViewAddCartMedicineList.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dataGridViewAddCartMedicineList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAddCartMedicineList_CellClick);
             // 
             // btnRemove
             // 
@@ -417,6 +436,7 @@
             this.btnRemove.Size = new System.Drawing.Size(163, 45);
             this.btnRemove.TabIndex = 26;
             this.btnRemove.Text = "Remove";
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // btnPurchasePrint
             // 
@@ -450,6 +470,42 @@
             this.lblPriceShow.Text = "BDT: ";
             this.lblPriceShow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Medicine Id";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Medicine Name";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Expire Date";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Price per Unit";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Number of Units";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Total Price";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            // 
             // UserControl_P_SellMedicine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -459,7 +515,7 @@
             this.Controls.Add(this.btnPurchasePrint);
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.dataGridViewAddCartMedicineList);
-            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.btnAddToCart);
             this.Controls.Add(this.txtPricePerUnit);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtBoxTotalPrice);
@@ -479,6 +535,7 @@
             this.Controls.Add(this.label1);
             this.Name = "UserControl_P_SellMedicine";
             this.Size = new System.Drawing.Size(1097, 780);
+            this.Load += new System.EventHandler(this.UserControl_P_SellMedicine_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAddCartMedicineList)).EndInit();
             this.ResumeLayout(false);
@@ -505,11 +562,17 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2TextBox txtBoxTotalPrice;
-        private Guna.UI2.WinForms.Guna2Button btnAdd;
+        private Guna.UI2.WinForms.Guna2Button btnAddToCart;
         private Guna.UI2.WinForms.Guna2DataGridView dataGridViewAddCartMedicineList;
         private Guna.UI2.WinForms.Guna2Button btnRemove;
         private Guna.UI2.WinForms.Guna2Button btnPurchasePrint;
         private System.Windows.Forms.Label lblPriceShow;
         private Guna.UI2.WinForms.Guna2Elipse guna2ElipseSellMedicine;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
     }
 }

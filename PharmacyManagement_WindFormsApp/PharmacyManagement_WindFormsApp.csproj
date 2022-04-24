@@ -111,6 +111,12 @@
     <Compile Include="PharmacistUC\UserControl_P_MedicineValidityCheck.Designer.cs">
       <DependentUpon>UserControl_P_MedicineValidityCheck.cs</DependentUpon>
     </Compile>
+    <Compile Include="PharmacistUC\UserControl_P_SellMedicine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PharmacistUC\UserControl_P_SellMedicine.Designer.cs">
+      <DependentUpon>UserControl_P_SellMedicine.cs</DependentUpon>
+    </Compile>
     <Compile Include="PharmacistUC\UserControl_P_UpdateMedicine.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -154,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PharmacistUC\UserControl_P_MedicineValidityCheck.resx">
       <DependentUpon>UserControl_P_MedicineValidityCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PharmacistUC\UserControl_P_SellMedicine.resx">
+      <DependentUpon>UserControl_P_SellMedicine.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PharmacistUC\UserControl_P_UpdateMedicine.resx">
       <DependentUpon>UserControl_P_UpdateMedicine.cs</DependentUpon>
